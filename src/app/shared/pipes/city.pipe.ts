@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,6 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
   pure: true
 })
 export class CityPipe implements PipeTransform {
+
+constructor(private http: HttpClient) {
+
+}
 
   transform(value: string, fmt: string): string {
 
